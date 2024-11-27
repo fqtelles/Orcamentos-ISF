@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento</title>
+</head>
+<body>
+    <div style="text-align: center; font-family: Arial, sans-serif;">
+        <h1 style="color: #2e78b7;">Orçamento</h1>
+        <div style="margin-bottom: 30px;"></div>
+            <img src="https://isf.com.br/wp-content/uploads/2020/09/ISF_SolucoesEmSeguranca_Logo.png" style="width: 300px; height: auto;"/>
+        </div>
+        <div style="font-family: 'Georgia', serif;"></div>
+            <p style="margin-top: 20px; font-size: 18px;">Detalhes do Orçamento:</p>
+            ${products.map(({ product, quantity, price }) => `
+                <p style="font-size: 16px;">${quantity}x ${product} - R$${(price * quantity).toFixed(2)}</p>
+            `).join('')}
+            <p style="margin-top: 20px; font-size: 18px;">Total de Produtos: ${totalQuantity}</p>
+            <p style="font-size: 18px; font-weight: bold;">Total a Pagar: R$${totalPrice.toFixed(2)}</p>
+        </div>
+    </div>
+</body>
+</html>
